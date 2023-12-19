@@ -19,7 +19,11 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "my-comp-atoms": ["./src/components/Atoms"],
+      "my-comp-molecules": ["./src/components/Molecules"],
+      "my-comp-organisms": ["./src/components/Organisms"],
+      "my-constant/*": ["./src/constant/*"],
+      "my-styles/*": ["./src/styles/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
