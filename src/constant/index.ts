@@ -44,12 +44,6 @@ export const lastTransaction = [
     icon: Tickets,
     amount: "-$5,000",
   },
-  {
-    title: "Bassie Link",
-    date: "02 july 2023",
-    icon: Tickets,
-    amount: "-$1,500",
-  },
 ];
 
 export const listBuy = [
@@ -63,11 +57,17 @@ export const listChat = [
   {
     title: "Are you ready?",
     icon: Tickets,
-    account: 'me',
+    account: "me",
   },
   {
     title: "Bassie Cooper",
     icon: Tickets,
-    account: 'other'
+    account: "other",
   },
+];
+
+export const optionsBalace = [
+  { title: "option 1", value: "opt1" },
+  { title: "option 2", value: "opt2" },
+  { title: "option 3", value: "opt3" },
 ];

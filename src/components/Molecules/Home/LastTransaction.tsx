@@ -4,9 +4,12 @@ import { lastTransaction } from "my-constant/index";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { TitleWithMenu } from "my-comp-atoms";
 
-export default function LastTransaction() {
+type Props = {
+  className: string;
+};
+export default function LastTransaction(props: Props) {
   return (
-    <div className="p-5 rounded-xl bg-white divide-y divide-gray1">
+    <div className={`${props.className} p-5 rounded-xl bg-white divide-y divide-gray1`}>
       <TitleWithMenu
         title="Last Transactions"
         filter={
@@ -17,7 +20,7 @@ export default function LastTransaction() {
         }
       />
       {lastTransaction.map((item, idx) => (
-        <div key={idx} className="flex justify-between items-center py-4">
+        <div key={idx} className="flex justify-between items-center py-2">
           <CardList item={item} circle="large" />
           <div className="flex space-x-5">
             <p className="text-sm font-medium">{item.amount}</p>
@@ -27,7 +30,6 @@ export default function LastTransaction() {
           </div>
         </div>
       ))}
-     
     </div>
   );
 }
