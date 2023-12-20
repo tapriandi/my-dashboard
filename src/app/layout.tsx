@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SideBar, MainContent } from "my-comp-organisms";
 import { poppins } from "my-styles/fonts";
 import "my-styles/globals.css";
+import RightContent from "../components/Organisms/RightContent";
 
 export const metadata: Metadata = {
   title: "My Dashboard",
@@ -19,7 +20,7 @@ export default function RootLayout({
         <div className="fixed inset-0 flex w-full">
           <SideBar />
           <MainContent children={children} />
-          <div className="w-96 bg-white">right</div>
+          <RightContent />
         </div>
       </body>
     </html>

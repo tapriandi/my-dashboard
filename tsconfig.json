@@ -19,6 +19,7 @@
       }
     ],
     "paths": {
+      "my-assets/*": ["./src/assets/*"],
       "my-comp-atoms": ["./src/components/Atoms"],
       "my-comp-molecules": ["./src/components/Molecules"],
       "my-comp-organisms": ["./src/components/Organisms"],

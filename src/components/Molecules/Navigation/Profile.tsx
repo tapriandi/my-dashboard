@@ -13,7 +13,7 @@ export default function NavigationProfile(props: Props) {
       <ButtonCircle className="hover:bg-purple">
         <MdOutlineLogout className="text-xl" />
       </ButtonCircle>
-      <ButtonCircle className="bg-gray hover:bg-purple hover:text-white">
+      <ButtonCircle className="bg-gray2 hover:bg-purple hover:text-white">
         <MdOutlineLogout className="text-xl" />
       </ButtonCircle>
     </div>

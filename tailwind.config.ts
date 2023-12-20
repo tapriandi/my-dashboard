@@ -16,7 +16,10 @@ const config: Config = {
       colors: {
         purple: "#525CCF",
         purple1: "#C7CAFF",
-        gray: "#F7F6FB",
+        purple2: "#F7F6FB",
+        gray: '#525157',
+        gray1: '#AAADB6',
+        gray2: '#F7F7F9',
         black: '#100E14',
         orange: '#FEA70F',
         orange2: '#FDDFBF'

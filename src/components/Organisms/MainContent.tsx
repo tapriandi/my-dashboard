@@ -30,7 +30,7 @@ export default function MainContent(props: Props) {
   }, []);
 
   return (
-    <div className="relative bg-gray w-full">
+    <div className="relative bg-purple2 w-full">
       <MainHeader
         className={`${sticky ? "sticky w-full inset-0 bg-white" : ""}`}
       />

@@ -10,7 +10,7 @@ type Props = {
 export default function NavigationMenu(props: Props) {
   return (
     <div
-      className={`${props.className} flex flex-col p-[5px] space-y-3 bg-gray rounded-full`}
+      className={`${props.className} flex flex-col p-[5px] space-y-3 bg-gray2 rounded-full`}
     >
       {navigationMenu.map((item, index) => (
         <ButtonCircle key={index} className="hover:bg-purple hover:text-white">
