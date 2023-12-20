@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <div className="fixed inset-0 flex w-full">
           <SideBar />
-          <MainContent children={children} />
+          <MainContent>{children}</MainContent>
           <RightContent />
         </div>
       </body>
