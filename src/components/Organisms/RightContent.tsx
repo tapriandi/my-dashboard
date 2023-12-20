@@ -3,10 +3,12 @@ import { ExpenseIncome, GotoPremium, LatestSpending } from "my-comp-molecules";
 
 export default function RightContent() {
   return (
-    <div className="w-[500px] flex flex-col space-y-5 p-5 bg-white overflow-y-auto">
-      <ExpenseIncome />
-      <LatestSpending />
-      <GotoPremium />
+    <div className="relative w-[500px] p-5 bg-white overflow-y-auto h-screen">
+      <div className="flex flex-col space-y-5 ">
+        <ExpenseIncome />
+        <LatestSpending />
+        <GotoPremium />
+      </div>
     </div>
   );
 }

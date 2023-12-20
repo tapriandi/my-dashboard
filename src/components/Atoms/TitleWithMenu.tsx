@@ -1,17 +1,18 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 type Props = {
   title: string;
   menu?: boolean;
   size?: string;
+  filter?: ReactNode;
 };
 
 export default function TitleWithMenu(props: Props) {
   return (
     <div
-      className={`flex pb-2 justify-between items-center ${
-        props.size ? props.size : "text-sm"
+      className={`flex pb-2 justify-between items-center font-medium ${
+        props.size ? props.size : "text-base"
       }`}
     >
       {props.title}
@@ -20,6 +21,7 @@ export default function TitleWithMenu(props: Props) {
           <BsThreeDotsVertical className="text-sm" />
         </button>
       )}
+      {props.filter && props.filter}
     </div>
   );
 }

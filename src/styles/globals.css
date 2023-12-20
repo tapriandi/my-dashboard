@@ -16,7 +16,7 @@
   }
 }
 
-*{
+* {
   outline: none;
   box-sizing: border-box;
   margin: 0;
@@ -24,11 +24,17 @@
 }
 
 body {
-  color: #100E14;
+  color: #100e14;
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.checkbox {
+  width: 1rem !important;
+  height: 1rem !important;
+  border-radius: 4px !important;
 }

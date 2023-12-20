@@ -33,6 +33,6 @@ const config: Config = {
     md: { max: "767px" },
     sm: { max: "639px" },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;

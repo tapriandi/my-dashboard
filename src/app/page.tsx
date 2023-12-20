@@ -1,4 +1,5 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { ChatForm, LastTransaction, ListItemToBuy } from "my-comp-molecules";
 
 export default function Home() {
   return (
@@ -109,6 +110,14 @@ export default function Home() {
     //     </a>
     //   </div>
     // </main>
-    <div></div>
-  )
+    <div className="p-5 flex flex-col space-y-5">
+      <div className="flex w-full">
+        <ListItemToBuy className="w-3/5" />
+        <ChatForm className="w-2/5" />
+      </div>
+      <div className="flex">
+        <LastTransaction />
+      </div>
+    </div>
+  );
 }

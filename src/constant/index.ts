@@ -17,6 +17,57 @@ export const navigationMenu = [
 
 export const spending = [
   { title: "Online Store", date: "May 30, 2023 at 08:00pm", icon: OnlineStore },
-  { title: "Pay the hospital", date: "May 28, 2023 at 10:00pm", icon: PayHospital },
+  {
+    title: "Pay the hospital",
+    date: "May 28, 2023 at 10:00pm",
+    icon: PayHospital,
+  },
   { title: "Tickets", date: "May 10, 2023 at 12:00 pm", icon: Tickets },
+];
+
+export const lastTransaction = [
+  {
+    title: "Bassie Cooper",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$3,000",
+  },
+  {
+    title: "Guy Hawkins",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$1,970",
+  },
+  {
+    title: "Floyd Miles",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$5,000",
+  },
+  {
+    title: "Bassie Link",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$1,500",
+  },
+];
+
+export const listBuy = [
+  { item: "Macbook" },
+  { item: "Bicycle" },
+  { item: "Motorcycle" },
+  { item: "Iphone 14 pro max" },
+];
+
+export const listChat = [
+  {
+    title: "Are you ready?",
+    icon: Tickets,
+    account: 'me',
+  },
+  {
+    title: "Bassie Cooper",
+    icon: Tickets,
+    account: 'other'
+  },
 ];

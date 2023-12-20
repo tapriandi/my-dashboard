@@ -3,7 +3,7 @@ import { ButtonCircle } from "my-comp-atoms";
 import { StaticImageData } from "next/image";
 
 type Props = {
-  circle: string;
+  circle?: string;
   className?: string;
   item: { title: string; date: string; icon: StaticImageData };
 };
