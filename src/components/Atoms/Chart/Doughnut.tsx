@@ -13,10 +13,14 @@ const data = [
 const COLORS = ["#5360E5", "#FFA515", "#EE5C51", "#F0F0F0"];
 
 const DoughnutCart = () => {
-  const [width, setWidth] = useState(1440);
+  const [width, setWidth] = useState(1800);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
   };
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);

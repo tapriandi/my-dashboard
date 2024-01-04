@@ -17,11 +17,15 @@ const data = [
 ];
 
 export default function BarVertical() {
-  const [width, setWidth] = useState(1440);
+  const [width, setWidth] = useState(1800);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
   };
 
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+  
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
 
