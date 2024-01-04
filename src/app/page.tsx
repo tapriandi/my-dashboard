@@ -15,7 +15,6 @@ export default function Home() {
       <div className="flex w-full space-x-5">
         <BalanceStatistic className="w-[55%]" />
         <CardVisa className="w-[45%]" />
-        {/* <Image src={Visa} alt="" className="w-[45%] " /> */}
       </div>
       <div className="flex w-full">
         <ListItemToBuy className="w-[52%]" />

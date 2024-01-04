@@ -13,7 +13,7 @@ const data = [
 const COLORS = ["#5360E5", "#FFA515", "#EE5C51", "#F0F0F0"];
 
 const DoughnutCart = () => {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(1440);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
   };

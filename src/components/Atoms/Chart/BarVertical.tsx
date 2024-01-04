@@ -17,7 +17,7 @@ const data = [
 ];
 
 export default function BarVertical() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(1440);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
   };
