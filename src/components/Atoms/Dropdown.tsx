@@ -8,7 +8,7 @@ type Props = {
 
 export default function Dropdown(props: Props) {
   return (
-    <div className="dropdown ">
+    <div className="dropdown dropdown-end">
       <div
         tabIndex={0}
         role="button"
@@ -19,7 +19,7 @@ export default function Dropdown(props: Props) {
       </div>
       <ul
         tabIndex={0}
-        className="bg-gray2 dropdown-content z-[1] menu p-2 shadow rounded-md w-40"
+        className="bg-gray2 my-1 dropdown-content z-[1] menu p-2 shadow rounded-md w-40"
       >
         {props.options.map((item, idx) => (
           <li className="" key={idx}>

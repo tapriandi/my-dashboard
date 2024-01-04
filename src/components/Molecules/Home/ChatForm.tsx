@@ -9,7 +9,7 @@ type Props = {
 
 export default function ChatForm(props: Props) {
   return (
-    <div className={`${props.className} p-5 rounded-r-xl w-full bg-white`}>
+    <div className={`${props.className} p-5 rounded-r-xl bg-white`}>
       <TitleWithMenu title="Esther Howard" />
 
       <div className="w-full">

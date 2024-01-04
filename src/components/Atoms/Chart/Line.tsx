@@ -1,87 +1,32 @@
-import React from "react";
-import { Doughnut, Line } from "react-chartjs-2";
-import { Chart, ArcElement } from "chart.js";
+"use client";
+import { Line, LineChart, Tooltip } from "recharts";
+import { HiOutlineArrowUpCircle } from "react-icons/hi2";
 
-// export default function Line() {
-//   const labels = Utils.months({ count: 7 });
-//   const data = {
-//     labels: labels,
-//     datasets: [
-//       {
-//         label: "My First Dataset",
-//         data: [65, 59, 80, 81, 56, 55, 40],
-//         fill: false,
-//         borderColor: "rgb(75, 192, 192)",
-//         tension: 0.1,
-//       },
-//     ],
-//   };
-//   return <div>Line</div>;
-// }
-
-
-
-Chart.register(ArcElement);
-
-const data = {
-  datasets: [
-    {
-      data: [3, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-      backgroundColor: [
-        "#336699",
-        "#99CCFF",
-        "#999933",
-        "#666699",
-        "#CC9933",
-        "#006666",
-        "#3399FF",
-        "#993300",
-        "#CCCC99",
-        "#666666",
-        "#FFFFFF",
-        "#FFFFFF",
-        "#FFFFFF"
-      ],
-      display: true,
-      borderColor: "#D1D6DC"
-    }
-  ]
-};
-
-const App = () => {
+const ChartLine = () => {
+  const data = [
+    { uv: 3 },
+    { uv: 4 },
+    { uv: 3 },
+    { uv: 11 },
+    { uv: 10 },
+    { uv: 4 },
+    { uv: 3 },
+    { uv: 5 },
+    { uv: 6 },
+  ];
   return (
-    <div>
-      <Doughnut
-        data={data}
-        options={{
-          plugins: {
-            legend: {
-              display: false
-            },
-            tooltip: {
-              enabled: false
-            }
-          },
-          rotation: -90,
-          circumference: 180,
-          cutout: "60%",
-          maintainAspectRatio: true,
-          responsive: true
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          top: "55%",
-          left: "50%",
-          transform: "translate(-50%, -50%)",
-          textAlign: "center"
-        }}
-      >
-        <div>Text Here</div>
+    <div className="flex items-center space-x-3">
+      <LineChart width={140} height={60} data={data}>
+        <Line type="monotone" dataKey="uv" stroke="#525CCF" strokeWidth={2} dot={false} />
+        <Tooltip />
+      </LineChart>
+
+      <div className="flex items-center">
+        <HiOutlineArrowUpCircle className="text-2xl" />
+        <p className="text-xs pl-1 font-semibold">6%</p>
       </div>
     </div>
   );
 };
 
-export default App;
+export default ChartLine;
