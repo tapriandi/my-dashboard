@@ -7,8 +7,6 @@ type Props = {
   className: string;
 };
 export default function MainHeader(props: Props) {
-  const [openSearch, setOpenSearch] = useState(false);
-
   return (
     <div className={`${props.className}  p-5 h-24 flex justify-between`}>
       <div>

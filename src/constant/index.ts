@@ -44,6 +44,24 @@ export const lastTransaction = [
     icon: Tickets,
     amount: "-$5,000",
   },
+  {
+    title: "Bassie Cooper",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$3,000",
+  },
+  {
+    title: "Guy Hawkins",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$1,970",
+  },
+  {
+    title: "Floyd Miles",
+    date: "02 july 2023",
+    icon: Tickets,
+    amount: "-$5,000",
+  },
 ];
 
 export const listBuy = [

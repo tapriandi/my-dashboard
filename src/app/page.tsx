@@ -5,6 +5,7 @@ import {
   ListItemToBuy,
   BalanceStatistic,
   Analitycs,
+  CardVisa,
 } from "my-comp-molecules";
 import Image from "next/image";
 
@@ -13,7 +14,8 @@ export default function Home() {
     <div className="p-5 flex flex-col space-y-5">
       <div className="flex w-full space-x-5">
         <BalanceStatistic className="w-[55%]" />
-        <Image src={Visa} alt="" className="w-[45%] aspect-[3/1.6]" />
+        <CardVisa className="w-[45%]" />
+        {/* <Image src={Visa} alt="" className="w-[45%] " /> */}
       </div>
       <div className="flex w-full">
         <ListItemToBuy className="w-[52%]" />

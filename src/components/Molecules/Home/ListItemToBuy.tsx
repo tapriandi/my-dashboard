@@ -10,7 +10,7 @@ type Props = {
 
 export default function ListItemToBuy(props: Props) {
   return (
-    <div className={`${props.className} p-5 rounded-l-xl bg-white border-r`}>
+    <div className={`${props.className} p-5 rounded-l-3xl bg-white border-r`}>
       <TitleWithMenu title="List of item to buy" />
       <div className="py-1 flex space-x-5 items-center">
         <div>

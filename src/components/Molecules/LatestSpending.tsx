@@ -10,11 +10,16 @@ type Props = {
 
 export default function LatestSpending(props: Props) {
   return (
-    <div className={`${props.className} p-4 rounded-xl border border-gray1`}>
+    <div className={`${props.className} p-4 rounded-2xl border border-gray1`}>
       <TitleWithMenu menu title="Latest spending" size="text-lg" />
       <div className=" flex flex-col divide-y divide-gray1">
         {spending.map((item, idx) => (
-          <CardList item={item} key={idx} circle="large" className="py-4" />
+          <CardList
+            item={item}
+            key={idx}
+            circle="large"
+            className="py-4 duration-300 hover:bg-gray2"
+          />
         ))}
       </div>
       <ButtonLink

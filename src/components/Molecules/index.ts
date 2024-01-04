@@ -1,5 +1,6 @@
 export { default as CardList } from "./Card/List";
 export { default as CardChat } from "./Card/Chat";
+export { default as CardVisa } from "./Card/CVisa";
 export { default as ExpenseIncome } from "./ExpenseIncome";
 export { default as LatestSpending } from "./LatestSpending";
 export { default as GotoPremium } from "./GotoPremium";

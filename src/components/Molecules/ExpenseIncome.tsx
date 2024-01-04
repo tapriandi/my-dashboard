@@ -7,7 +7,7 @@ type Props = {
 
 export default function ExpenseIncome(props: Props) {
   return (
-    <div className={`${props.className} p-4 rounded-xl border border-gray1`}>
+    <div className={`${props.className} p-4 rounded-2xl border border-gray1`}>
       <TitleWithMenu title="Expense and Income" size="text-lg" />
       <div className="pt-3 pb-3 flex justify-between items-center">
         <div className="">

@@ -12,7 +12,7 @@ type Props = {
 
 export default function BalanceStatistic(props: Props) {
   return (
-    <div className={`${props.className} p-5 rounded-xl bg-white`}>
+    <div className={`${props.className} p-5 rounded-3xl bg-white`}>
       <div className="flex items-start justify-between">
         <div className="w-[25%]">
           <p className="font-medium">Balance Statistic</p>

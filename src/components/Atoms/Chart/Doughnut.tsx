@@ -53,7 +53,7 @@ const DoughnutCart = () => {
 
   return (
     <div className="relative pt-6">
-      <PieChart width={width * 0.23} height={width * 0.1}>
+      <PieChart width={width * 0.23} height={width * 0.1} style={{ zIndex: 2 }}>
         <Pie
           data={data}
           cx={width * 0.11}
@@ -93,8 +93,8 @@ const DoughnutCart = () => {
         </text>
       </PieChart>
 
-      <div className="absolute inset-0 -top-[5%] left-[1%] w-full flex justify-center">
-        <Image src={Curved} alt="" className="w-[90%] h-[90%]"/>
+      <div className="absolute z-1 inset-0 -top-[5%] left-[1%] w-full flex justify-center">
+        <Image src={Curved} alt="" className="w-[90%] h-[90%]" />
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ export default function FormChat() {
           <ButtonIcon icon={<GoPaperclip />} />
         </div>
 
-        <Button title="Send now" size="h-6 px-2 text-xs rounded-md" />
+        <Button title="Send now" size="h-7 px-3 text-xs rounded-md" />
       </div>
     </div>
   );
