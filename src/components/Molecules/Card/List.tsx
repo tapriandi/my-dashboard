@@ -12,7 +12,7 @@ export default function List(props: Props) {
     <div className={`flex items-center ${props.className}`}>
       <ButtonCircle image={props.item.icon} circle={props.circle} />
       <div className="pl-4">
-        <p className="">{props.item.title}</p>
+        <p className="font-medium">{props.item.title}</p>
         <p className="text-xs text-gray1">{props.item.date}</p>
       </div>
     </div>

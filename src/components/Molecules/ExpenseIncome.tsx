@@ -12,7 +12,7 @@ export default function ExpenseIncome(props: Props) {
       <div className="pt-3 pb-3 flex justify-between items-center">
         <div className="">
           <p className="text-sm">Expense</p>
-          <p className="text-lg">75%</p>
+          <p className="text-xl font-medium">75%</p>
           <p className="text-xs text-gray1">5663</p>
         </div>
         <div className="flex flex-col items-center">
@@ -22,7 +22,7 @@ export default function ExpenseIncome(props: Props) {
         </div>
         <div className=" text-right">
           <p className="text-sm">Income</p>
-          <p className="text-lg">40%</p>
+          <p className="text-xl font-medium">40%</p>
           <p className="text-xs text-gray1">2656</p>
         </div>
       </div>

@@ -1,7 +1,5 @@
 import React from "react";
-import { Doughnut, FormChat, TitleWithMenu } from "my-comp-atoms";
-import { CardChat } from "my-comp-molecules";
-import { listChat } from "my-constant/index";
+import { Doughnut, Dummy, TitleWithMenu } from "my-comp-atoms";
 
 type Props = {
   className?: string;
@@ -9,9 +7,7 @@ type Props = {
 
 export default function Analitycs(props: Props) {
   return (
-    <div
-      className={`${props.className} relative p-5 rounded-xl bg-white`}
-    >
+    <div className={`${props.className} relative p-5 rounded-xl bg-white`}>
       <TitleWithMenu title="Analytics" menu />
       <Doughnut />
     </div>

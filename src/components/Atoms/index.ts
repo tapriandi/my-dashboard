@@ -9,3 +9,4 @@ export { default as Dropdown } from "./Dropdown";
 export { default as Doughnut } from "./Chart/Doughnut";
 export { default as FormChat } from ".//FormChat";
 export { default as TitleWithMenu } from "./TitleWithMenu";
+export { default as Dummy } from "./Chart/dummy";

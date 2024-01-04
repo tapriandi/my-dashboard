@@ -21,9 +21,9 @@ export default function LastTransaction(props: Props) {
       />
       {lastTransaction.map((item, idx) => (
         <div key={idx} className="flex justify-between items-center py-2">
-          <CardList item={item} circle="large" />
+          <CardList item={item} circle="medium" />
           <div className="flex space-x-5">
-            <p className="w-16 font-medium">{item.amount}</p>
+            <p className="w-16 text-sm font-semibold">{item.amount}</p>
             <button className=" p-1 flex item-center justify-center rounded-full duration-300  hover:bg-gray2">
               <BsThreeDotsVertical />
             </button>

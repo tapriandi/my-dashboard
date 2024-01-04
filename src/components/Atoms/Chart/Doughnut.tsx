@@ -1,6 +1,8 @@
 "use client";
+import { Curved } from "my-assets/Image";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Cell, Pie, PieChart, Legend } from "recharts";
+import { Cell, Pie, PieChart, Legend, Tooltip } from "recharts";
 
 const data = [
   { name: "Done", value: 400 },
@@ -8,7 +10,7 @@ const data = [
   { name: "To do", value: 300 },
   { name: "", value: 200 },
 ];
-const COLORS = ["#5360E5", "#FFA515", "#EE5C51", "silver"];
+const COLORS = ["#5360E5", "#FFA515", "#EE5C51", "#F0F0F0"];
 
 const DoughnutCart = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -34,8 +36,7 @@ const DoughnutCart = () => {
             return (
               <li
                 key={`item-${index}`}
-                style={{ color: COLORS[index] }}
-                className="flex items-center"
+                className="flex items-center text-gray1"
               >
                 <div
                   className="w-2 h-2 rounded-full mr-1"
@@ -51,7 +52,7 @@ const DoughnutCart = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative pt-6">
       <PieChart width={width * 0.23} height={width * 0.1}>
         <Pie
           data={data}
@@ -59,24 +60,41 @@ const DoughnutCart = () => {
           cy={width * 0.08}
           startAngle={180}
           endAngle={0}
-          innerRadius={width * 0.08 - 20}
+          innerRadius={width * 0.08 - 18}
           outerRadius={width * 0.08}
           fill="#8884d8"
           dataKey="value"
+          paddingAngle={-10}
+          cornerRadius={10}
         >
           {data.map((entry, index) => (
-            <Cell
-              key={`cell-${index}`}
-              fill={COLORS[index % COLORS.length]}
-              radius={"10px"}
-            />
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
         </Pie>
+        <Tooltip />
         <Legend content={renderLegend} />
+        <text
+          x="50%"
+          y="60%"
+          width={200}
+          className="text-3xl font-semibold"
+          textAnchor="middle"
+        >
+          90%
+        </text>
+        <text
+          x="50%"
+          y="70%"
+          className="text-sm text-gray1"
+          width={200}
+          textAnchor="middle"
+        >
+          done
+        </text>
       </PieChart>
-      <div className="absolute inset-0 top-[40%]">
-        <p className="text-3xl font-semibold text-center pr-1">90%</p>
-        <p className="text-sm text-center text-gray1 pr-1">done</p>
+
+      <div className="absolute inset-0 -top-[5%] left-[1%] w-full flex justify-center">
+        <Image src={Curved} alt="" className="w-[90%] h-[90%]"/>
       </div>
     </div>
   );

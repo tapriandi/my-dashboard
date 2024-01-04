@@ -12,7 +12,7 @@ export default function Circle(props: Props) {
   let size = "";
   switch (props.circle) {
     case "large":
-      size = "w-14 h-14";
+      size = "w-16 h-16";
       break;
     case "medium":
       size = "w-12 h-12";
