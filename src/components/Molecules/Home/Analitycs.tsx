@@ -10,7 +10,7 @@ type Props = {
 export default function Analitycs(props: Props) {
   return (
     <div
-      className={`${props.className} relative p-5 rounded-r-xl bg-white`}
+      className={`${props.className} relative p-5 rounded-xl bg-white`}
     >
       <TitleWithMenu title="Analytics" menu />
       <Doughnut />

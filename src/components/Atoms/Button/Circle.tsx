@@ -9,11 +9,22 @@ type Props = {
 };
 
 export default function Circle(props: Props) {
+  let size = "";
+  switch (props.circle) {
+    case "large":
+      size = "w-14 h-14";
+      break;
+    case "medium":
+      size = "w-12 h-12";
+      break;
+    default:
+      size = "w-10 h-10";
+
+      break;
+  }
   return (
     <button
-      className={`${props.className} ${
-        props.circle === "large" ? "w-12 h-12" : "w-10 h-10"
-      } rounded-full flex items-center justify-center duration-500 hover:shadow-md`}
+      className={`${props.className} ${size} rounded-full flex items-center justify-center duration-500 hover:shadow-md`}
     >
       {props.image ? (
         <Image

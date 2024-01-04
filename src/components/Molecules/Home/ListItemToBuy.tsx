@@ -14,16 +14,16 @@ export default function ListItemToBuy(props: Props) {
       <TitleWithMenu title="List of item to buy" />
       <div className="py-1 flex space-x-5 items-center">
         <div>
-          <p className="text-xl font-semibold">02:00</p>
-          <p className="text-xs text-gray1">Sat, August 12</p>
+          <p className="text-2xl font-semibold">02:00</p>
+          <p className="text-sm text-gray1">Sat, August 12</p>
         </div>
         <FaChevronRight />
         <div>
-          <p className="text-xl font-semibold">05:00</p>
-          <p className="text-xs text-gray1">Sat, September 12</p>
+          <p className="text-2xl font-semibold">05:00</p>
+          <p className="text-sm text-gray1">Sat, September 12</p>
         </div>
       </div>
-      <div className="text-xs font-semibold pt-4 flex justify-between items-center">
+      <div className="text-sm font-semibold pt-4 flex justify-between items-center">
         <p className="">
           <span className="text-gray1">0/3</span> Shopping list
         </p>

@@ -7,7 +7,7 @@ export default function FormChat() {
   return (
     <div className="bg-gray2 p-2 rounded-lg">
       <textarea
-        className="w-full text-xs p-1 bg-gray2 h-7 placeholder:text-gray1"
+        className="w-full text-sm p-1 bg-gray2 h-7 placeholder:text-gray1"
         placeholder="type your message"
       />
       <div className="flex justify-between items-center">

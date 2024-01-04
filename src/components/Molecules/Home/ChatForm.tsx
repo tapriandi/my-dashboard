@@ -12,7 +12,7 @@ export default function ChatForm(props: Props) {
     <div className={`${props.className} p-5 rounded-r-xl bg-white`}>
       <TitleWithMenu title="Esther Howard" />
 
-      <div className="w-full">
+      <div className="w-full h-36 overflow-y-scroll">
         {listChat.map((item, idx) => (
           <CardChat
             item={item}

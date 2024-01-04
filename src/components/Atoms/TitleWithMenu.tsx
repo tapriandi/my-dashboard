@@ -11,7 +11,7 @@ type Props = {
 export default function TitleWithMenu(props: Props) {
   return (
     <div
-      className={`flex pb-2 justify-between items-center font-medium ${
+      className={`flex pb-2 text-lg justify-between items-center font-medium ${
         props.size ? props.size : "text-base"
       }`}
     >

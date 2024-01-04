@@ -14,8 +14,8 @@ export default function LastTransaction(props: Props) {
         title="Last Transactions"
         filter={
           <div className="flex space-x-3 text-sm">
-            <button className="hover:underline">Newest</button>
-            <button className="hover:underline">Oldest</button>
+            <button className="w-16 hover:underline">Newest</button>
+            <button className="w-16 hover:underline">Oldest</button>
           </div>
         }
       />
@@ -23,9 +23,9 @@ export default function LastTransaction(props: Props) {
         <div key={idx} className="flex justify-between items-center py-2">
           <CardList item={item} circle="large" />
           <div className="flex space-x-5">
-            <p className="text-sm font-medium">{item.amount}</p>
-            <button className="p-1 flex item-center justify-center rounded-full duration-300  hover:bg-gray2">
-              <BsThreeDotsVertical className="text-sm" />
+            <p className="w-16 font-medium">{item.amount}</p>
+            <button className=" p-1 flex item-center justify-center rounded-full duration-300  hover:bg-gray2">
+              <BsThreeDotsVertical />
             </button>
           </div>
         </div>
