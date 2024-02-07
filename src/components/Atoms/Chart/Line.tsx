@@ -1,6 +1,7 @@
 "use client";
 import { Line, LineChart, Tooltip } from "recharts";
 import { HiOutlineArrowUpCircle } from "react-icons/hi2";
+import style from "./style.module.css";
 
 const ChartLine = () => {
   const data = [
@@ -15,15 +16,21 @@ const ChartLine = () => {
     { uv: 6 },
   ];
   return (
-    <div className="flex items-center space-x-3">
+    <div className={style.flex} style={{ alignItems: "flex-start" }}>
       <LineChart width={140} height={60} data={data}>
-        <Line type="monotone" dataKey="uv" stroke="#525CCF" strokeWidth={2} dot={false} />
+        <Line
+          type="monotone"
+          dataKey="uv"
+          stroke="#525CCF"
+          strokeWidth={2}
+          dot={false}
+        />
         <Tooltip />
       </LineChart>
 
-      <div className="flex items-center">
-        <HiOutlineArrowUpCircle className="text-2xl" />
-        <p className="text-xs pl-1 font-semibold">6%</p>
+      <div className={style.flex}>
+        <HiOutlineArrowUpCircle style={{ fontSize: "20px" }} />
+        <p className={style.p}>6%</p>
       </div>
     </div>
   );

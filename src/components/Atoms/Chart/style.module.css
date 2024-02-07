@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.p {
+  padding-left: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.fz12 {
+  font-size: 12px;
+}
+
+/* doughnut */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+.dot {
+  margin-right: 4px;
+  border-radius: 50%;
+  margin-left: 12px;
+  width: 8px;
+  height: 8px;
+}

@@ -8,6 +8,8 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import style from "./style.module.css";
+
 const data = [
   { name: "Oct", uv: 60, pv: 58 },
   { name: "Nov", uv: 34, pv: 30 },
@@ -25,7 +27,7 @@ export default function BarVertical() {
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
-  
+
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
 
@@ -37,9 +39,9 @@ export default function BarVertical() {
   return (
     <ResponsiveContainer width={width * 0.25} height={width * 0.12}>
       <BarChart data={data}>
-        <XAxis dataKey="name" className="text-xs" />
+        <XAxis dataKey="name" className={style.fz12} />
         <YAxis
-          className="text-xs"
+          className={style.fz12}
           tickFormatter={(tick) => {
             return `$${tick}`;
           }}

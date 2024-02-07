@@ -1,8 +1,9 @@
 "use client";
-import { Curved } from "my-assets/Image";
 import Image from "next/image";
+import { Curved } from "my-assets/Image";
 import { useEffect, useState } from "react";
 import { Cell, Pie, PieChart, Legend, Tooltip } from "recharts";
+import style from "./style.module.css";
 
 const data = [
   { name: "Done", value: 400 },
@@ -34,16 +35,17 @@ const DoughnutCart = () => {
     const { payload } = props;
 
     return (
-      <ul className="flex space-x-3 text-sm justify-center">
+      <ul className={style.wrapper}>
         {payload.map((entry: any, index: number) => {
           if (index !== payload.length - 1) {
             return (
               <li
                 key={`item-${index}`}
-                className="flex items-center text-gray1"
+                className={style.flex}
+                style={{ color: "#AAADB6" }}
               >
                 <div
-                  className="w-2 h-2 rounded-full mr-1"
+                  className={style.dot}
                   style={{ background: COLORS[index] }}
                 ></div>{" "}
                 {entry.value}

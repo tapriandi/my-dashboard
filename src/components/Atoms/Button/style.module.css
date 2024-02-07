@@ -10,7 +10,7 @@
 }
 .button:hover {
   color: #525ccf;
-  box-shadow: 1px 1px 5px gray;
+  box-shadow: 1px 1px gray;
   background-color: white;
 }
 .buttonSize {
@@ -29,7 +29,7 @@
   transition: 0.5s;
 }
 .circle:hover {
-  box-shadow: 1px 1px 5px gray;
+  box-shadow: 1px 1px gray;
 }
 .circleImg {
   width: 100%;
