@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import React, { ReactNode } from "react";
+import style from "./style.module.css";
 
 type Props = {
   image?: StaticImageData;
@@ -9,29 +10,23 @@ type Props = {
 };
 
 export default function Circle(props: Props) {
-  let size = "";
+  let size = {};
   switch (props.circle) {
     case "large":
-      size = "w-16 h-16";
+      size = { width: "64px", height: "64px" };
       break;
     case "medium":
-      size = "w-12 h-12";
+      size = { width: "48px", height: "48px" };
       break;
     default:
-      size = "w-10 h-10";
-
+      size = { width: "40px", height: "40px" };
       break;
   }
+
   return (
-    <button
-      className={`${props.className} ${size} rounded-full flex items-center justify-center duration-500 hover:shadow-md`}
-    >
+    <button className={`${props.className} ${style.circle}`} style={size}>
       {props.image ? (
-        <Image
-          src={props.image}
-          alt=""
-          className={`w-full object-cover object-center`}
-        />
+        <Image src={props.image} alt="" className={style.circleImg} />
       ) : (
         props.children
       )}

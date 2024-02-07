@@ -1,6 +1,5 @@
-import Image, { StaticImageData } from "next/image";
-import React, { ReactNode } from "react";
-
+import React from "react";
+import style from "./style.module.css";
 type Props = {
   title?: string;
   className?: string;
@@ -11,10 +10,8 @@ export default function button(props: Props) {
   return (
     <button
       className={`${props.className} 
-      ${props.full && "w-full"} 
-      ${props.size ? props.size : "h-12 text-sm mt-2 rounded-2xl"}
-        text-white bg-purple  flex items-center justify-center duration-500
-      border border-purple hover:shadow-md hover:bg-white hover:text-purple`}
+      ${props.size ? props.size : style.buttonSize} ${style.button}`}
+      style={props.full ? { width: "100%" } : {}}
     >
       {props.title}
     </button>
