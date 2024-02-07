@@ -12,7 +12,6 @@ export default function Checkbox(props: Props) {
           <input type="checkbox" className="checkbox checkbox-primary" />
           <span className="text-sm font-medium">{props.title}</span>
         </div>
-
         <BsThreeDotsVertical />
       </label>
     </div>

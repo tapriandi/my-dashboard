@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import style from "./style.module.css";
 
 type Props = {
   title: string;
@@ -11,14 +12,17 @@ type Props = {
 export default function TitleWithMenu(props: Props) {
   return (
     <div
-      className={`flex pb-2 text-lg justify-between items-center font-medium ${
-        props.size ? props.size : "text-base"
-      }`}
+      className={
+        (style.flex,
+        style.titleMenu,
+        style.tlg,
+        ` ${props.size ? props.size : style.tbase}`)
+      }
     >
       {props.title}
       {props.menu && (
-        <button className="p-1 flex item-center justify-center rounded-full duration-300  hover:bg-gray2">
-          <BsThreeDotsVertical className="text-sm" />
+        <button className={(style.flex, style.titleMenuBtn)}>
+          <BsThreeDotsVertical className={style.tsm} />
         </button>
       )}
       {props.filter && props.filter}

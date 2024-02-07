@@ -28,11 +28,7 @@ export default function BalanceStatistic(props: Props) {
         </div>
         <div className="flex flex-col items-end w-[75%]">
           <div>
-            <Dropdown
-              title="Filter"
-              options={optionsBalace}
-              suffix={<FaAngleDown />}
-            />
+            <Dropdown title="Filter" options={optionsBalace} />
           </div>
           <div className="mt-5">
             <BarVertical />

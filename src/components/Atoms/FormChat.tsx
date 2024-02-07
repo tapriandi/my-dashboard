@@ -2,21 +2,20 @@ import React from "react";
 import { HiOutlineFaceSmile } from "react-icons/hi2";
 import { GoPaperclip } from "react-icons/go";
 import { Button, ButtonIcon } from "my-comp-atoms";
+import style from "./style.module.css";
 
 export default function FormChat() {
   return (
-    <div className="bg-gray2 p-2 rounded-lg">
-      <textarea
-        className="w-full text-sm p-1 bg-gray2 h-7 placeholder:text-gray1"
-        placeholder="type your message"
-      />
-      <div className="flex justify-between items-center">
-        <div className="flex space-x-2">
+    <div className={style.chatWrapper}>
+      <textarea className={style.chatArea} placeholder="type your message" />
+      <div className={style.flex} style={{ justifyContent: "space-between" }}>
+        <div style={{ display: "flex" }}>
           <ButtonIcon icon={<HiOutlineFaceSmile />} />
+          <div style={{ width: "4px" }}></div>
           <ButtonIcon icon={<GoPaperclip />} />
         </div>
 
-        <Button title="Send now" size="h-7 px-3 text-xs rounded-md" />
+        <Button title="Send now" size={style.chatBtn} />
       </div>
     </div>
   );

@@ -38,3 +38,8 @@ body {
   height: 1rem !important;
   border-radius: 4px !important;
 }
+
+select {
+  cursor: pointer;
+  background-color: transparent;
+}
