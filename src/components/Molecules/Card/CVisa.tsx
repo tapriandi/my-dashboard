@@ -1,6 +1,7 @@
 import { Visa } from "my-assets/Image";
 import Image from "next/image";
 import React from "react";
+import style from "./style.module.css";
 
 type Props = {
   className?: string;
@@ -8,11 +9,11 @@ type Props = {
 
 export default function CardVisa(props: Props) {
   return (
-    <div className={`relative aspect-[3/1.6] ${props.className} rounded-3xl overflow-hidden duration-300 hover:shadow-lg`}>
-      <Image src={Visa} alt="" className="h-full" />
-      <div className="absolute bottom-[10%] left-0 px-[8%] flex justify-between w-full items-end text-white">
+    <div className={style.cvWrapper}>
+      <Image src={Visa} alt="" style={{ height: "100%" }} />
+      <div className={style.cvContent}>
         <div>
-          <p className="pb-2">**** 9838</p>
+          <p style={{ paddingBottom: "8px" }}>**** 9838</p>
           <p>Jhon Demon</p>
         </div>
         <p>08/12</p>

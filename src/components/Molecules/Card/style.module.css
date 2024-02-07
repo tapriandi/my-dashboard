@@ -1,0 +1,43 @@
+.chatBox {
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+.chatText {
+  margin-right: 10px;
+  font-size: 12px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: white;
+  height: fit-content;
+  background-color: #525ccf;
+}
+.bgWhite {
+  color: black;
+  margin-left: 10px;
+  margin-right: 0;
+  background-color: #f7f7f9;
+}
+
+/* card visa */
+.cvWrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.5s;
+  aspect-ratio: 16/9;
+}
+.cvWrapper:hover {
+  border-color: 1px 1px gray;
+}
+.cvContent {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  padding: 0 8%;
+  color: white;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}

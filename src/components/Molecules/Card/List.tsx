@@ -9,11 +9,11 @@ type Props = {
 };
 export default function List(props: Props) {
   return (
-    <div className={`flex items-center ${props.className}`}>
+    <div style={{ display: "flex", alignItems: "center" }}>
       <ButtonCircle image={props.item.icon} circle={props.circle} />
-      <div className="pl-4">
-        <p className="font-medium">{props.item.title}</p>
-        <p className="text-xs text-gray1">{props.item.date}</p>
+      <div style={{ paddingLeft: "16px" }}>
+        <p style={{ fontWeight: 600 }}>{props.item.title}</p>
+        <p style={{ fontSize: "12px", color: "#AAADB6" }}>{props.item.date}</p>
       </div>
     </div>
   );
