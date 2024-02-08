@@ -14,11 +14,7 @@ export default function ChatForm(props: Props) {
 
       <div className="w-full h-36 overflow-y-auto">
         {listChat.map((item, idx) => (
-          <CardChat
-            item={item}
-            key={idx}
-            className={`${idx % 2 == 0 && "justify-end"}`}
-          />
+          <CardChat item={item} key={idx} />
         ))}
       </div>
 

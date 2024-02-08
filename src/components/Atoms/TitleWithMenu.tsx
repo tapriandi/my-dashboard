@@ -12,16 +12,13 @@ type Props = {
 export default function TitleWithMenu(props: Props) {
   return (
     <div
-      className={
-        (style.flex,
-        style.titleMenu,
-        style.tlg,
-        ` ${props.size ? props.size : style.tbase}`)
-      }
+      className={`${style.flex} ${style.titleMenu} ${style.tlg} 
+      ${style.justifyBetween} 
+      ${props.size ? props.size : style.tbase}`}
     >
       {props.title}
       {props.menu && (
-        <button className={(style.flex, style.titleMenuBtn)}>
+        <button className={`${style.flex} ${style.titleMenuBtn}`}>
           <BsThreeDotsVertical className={style.tsm} />
         </button>
       )}

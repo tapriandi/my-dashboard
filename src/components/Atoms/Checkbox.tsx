@@ -1,19 +1,28 @@
 import React from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import style from "./style.module.css";
 
 type Props = {
   title: string;
 };
 export default function Checkbox(props: Props) {
   return (
-    <div className="form-control bg-gray2 px-1 py-1 rounded-md duration-300 border border-transparent hover:border-gray1">
-      <label className="label cursor-pointer">
-        <div className="flex items-center space-x-2">
-          <input type="checkbox" className="checkbox checkbox-primary" />
-          <span className="text-sm font-medium">{props.title}</span>
+    <>
+      <div
+        className={`${style.checkboxWrapper} ${style.flex} ${style.justifyBetween}`}
+      >
+        <div className={style.container}>
+          <input
+            type="checkbox"
+            className={`${style.checkbox} ${style.containerInput}`}
+          />
+          <span className={style.checkmark}></span>
+          <span style={{ fontSize: "12px", fontWeight: 600 }}>
+            {props.title}
+          </span>
         </div>
         <BsThreeDotsVertical />
-      </label>
-    </div>
+      </div>
+    </>
   );
 }

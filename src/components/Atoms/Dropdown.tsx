@@ -10,7 +10,7 @@ export default function Dropdown(props: Props) {
   return (
     <div className={style.select}>
       <select name="" id="">
-        <option selected value="">Filter</option>
+        <option value="">Filter</option>
         {props.options.map((item, idx) => (
           <option key={idx} value={idx+1}>
             {item.title}
