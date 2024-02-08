@@ -1,6 +1,7 @@
+import React from "react";
 import { ButtonCircle } from "my-comp-atoms";
 import { navigationMenu } from "my-constant/index";
-import React from "react";
+import style from "./style.module.css";
 
 type Props = {
   className?: string;
@@ -9,12 +10,10 @@ type Props = {
 
 export default function NavigationMenu(props: Props) {
   return (
-    <div
-      className={`${props.className} flex flex-col p-[5px] space-y-3 bg-gray2 rounded-full`}
-    >
+    <div className={style.menuBox}>
       {navigationMenu.map((item, index) => (
-        <ButtonCircle key={index} className="hover:bg-purple hover:text-white">
-          {<item.icon className="text-xl" />}
+        <ButtonCircle key={index}className={style.menuItem}>
+          {<item.icon style={{ fontSize: "18px" }} />}
         </ButtonCircle>
       ))}
     </div>

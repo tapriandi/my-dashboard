@@ -27,6 +27,7 @@
   justify-content: center;
   border-radius: 50%;
   transition: 0.5s;
+  overflow: hidden;
 }
 .circle:hover {
   box-shadow: 1px 1px gray;

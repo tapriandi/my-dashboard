@@ -51,6 +51,7 @@
 /* last  */
 .transList {
   height: 200px;
+  padding-top: 10px;
   overflow-y: auto;
 }
 .transItem {
