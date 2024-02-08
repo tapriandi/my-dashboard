@@ -1,0 +1,9 @@
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapperBox {
+  display: flex;
+  padding-bottom: 20px;
+}

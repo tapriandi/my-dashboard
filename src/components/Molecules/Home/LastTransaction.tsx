@@ -1,36 +1,34 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { CardList } from "my-comp-molecules";
 import { lastTransaction } from "my-constant/index";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { TitleWithMenu } from "my-comp-atoms";
+import style from "./style.module.css";
 
 type Props = {
-  className: string;
+  style?: CSSProperties;
 };
+
 export default function LastTransaction(props: Props) {
   return (
-    <div
-      className={`${props.className} p-5 rounded-3xl bg-white divide-y divide-gray1`}
-    >
+    <div className={`${style.box}`} style={props.style}>
       <TitleWithMenu
         title="Last Transactions"
         filter={
-          <div className="flex space-x-3 text-sm">
-            <button className="w-16 hover:underline">Newest</button>
-            <button className="w-16 hover:underline">Oldest</button>
+          <div className={style.transTitle}>
+            <button className={style.transTitleBtn}>Newest</button>
+            <button className={style.transTitleBtn}>Oldest</button>
           </div>
         }
       />
-      <div className="h-52 overflow-y-auto">
+      <div style={{ width: "100%", border: "1px solid #AAADB6" }}></div>
+      <div className={style.transList}>
         {lastTransaction.map((item, idx) => (
-          <div
-            key={idx}
-            className="flex justify-between items-center py-2 duration-300 hover:bg-gray2"
-          >
+          <div key={idx} className={style.transItem}>
             <CardList item={item} circle="medium" />
-            <div className="flex space-x-5">
-              <p className="w-16 text-sm font-semibold">{item.amount}</p>
-              <button className=" p-1 flex item-center justify-center rounded-full duration-300  hover:bg-gray2">
+            <div className={style.transItemBox}>
+              <p className={style.transItemAmount}>{item.amount}</p>
+              <button className={style.transItemBtn}>
                 <BsThreeDotsVertical />
               </button>
             </div>

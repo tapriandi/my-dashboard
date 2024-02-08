@@ -1,4 +1,3 @@
-import { Visa } from "my-assets/Image";
 import {
   ChatForm,
   LastTransaction,
@@ -7,22 +6,25 @@ import {
   Analitycs,
   CardVisa,
 } from "my-comp-molecules";
-import Image from "next/image";
+import style from "./style.module.css";
 
 export default function Home() {
   return (
-    <div className="p-5 flex flex-col space-y-5">
-      <div className="flex w-full space-x-5">
-        <BalanceStatistic className="w-[55%]" />
-        <CardVisa className="w-[45%]" />
+    <div className={style.wrapper}>
+      <div className={style.wrapperBox}>
+        <BalanceStatistic style={{ width: "54%" }} />
+        <div style={{ width: "2%" }}></div>
+        <CardVisa style={{ width: "44%" }} />
       </div>
-      <div className="flex w-full">
-        <ListItemToBuy className="w-[52%]" />
-        <ChatForm className="w-[48%]" />
+      <div className={style.wrapperBox}>
+        <ListItemToBuy style={{ width: "50%" }} />
+        <div style={{ width: "2%" }}></div>
+        <ChatForm style={{ width: "48%" }} />
       </div>
-      <div className="flex w-full space-x-5">
-        <LastTransaction className="w-[62%]" />
-        <Analitycs className="w-[38%]" />
+      <div className={style.wrapperBox}>
+        <LastTransaction style={{ width: "60%" }} />
+        <div style={{ width: "2%" }}></div>
+        <Analitycs style={{ width: "38%" }} />
       </div>
     </div>
   );

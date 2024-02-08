@@ -1,15 +1,15 @@
 import { Visa } from "my-assets/Image";
 import Image from "next/image";
-import React from "react";
+import React, { CSSProperties } from "react";
 import style from "./style.module.css";
 
 type Props = {
-  className?: string;
+  style?: CSSProperties;
 };
 
 export default function CardVisa(props: Props) {
   return (
-    <div className={style.cvWrapper}>
+    <div className={style.cvWrapper} style={props.style}>
       <Image src={Visa} alt="" style={{ height: "100%" }} />
       <div className={style.cvContent}>
         <div>
