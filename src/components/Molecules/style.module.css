@@ -8,6 +8,7 @@
 }
 /* go to premium */
 .gtTitle {
+  font-size: 18px;
   text-align: center;
   font-weight: 600;
 }
@@ -29,7 +30,7 @@
   justify-content: space-between;
 }
 .headerTitle {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
 }
 .btnCircle:hover {

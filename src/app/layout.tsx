@@ -1,7 +1,6 @@
+import 'my-styles/globals.css';
 import type { Metadata } from "next";
 import { SideBar, MainContent } from "my-comp-organisms";
-import { poppins } from "my-styles/fonts";
-import "my-styles/globals.css";
 import RightContent from "../components/Organisms/RightContent";
 import style from "./style.module.css";
 
@@ -17,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={poppins.className}>
+      <body>
         <div className={style.layout}>
           <SideBar />
           <MainContent>{children}</MainContent>
