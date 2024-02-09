@@ -65,10 +65,10 @@ export const lastTransaction = [
 ];
 
 export const listBuy = [
-  { item: "Macbook" },
-  { item: "Bicycle" },
-  { item: "Motorcycle" },
-  { item: "Iphone 14 pro max" },
+  { id: 1, item: "Macbook", active: false },
+  { id: 2, item: "Bicycle", active: false },
+  { id: 3, item: "Motorcycle", active: false },
+  { id: 4, item: "Iphone 14 pro max", active: false },
 ];
 
 export const listChat = [

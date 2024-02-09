@@ -4,25 +4,24 @@ import style from "./style.module.css";
 
 type Props = {
   title: string;
+  id: number;
+  status: boolean;
+  onClick: () => void;
 };
 export default function Checkbox(props: Props) {
   return (
-    <>
-      <div
-        className={`${style.checkboxWrapper} ${style.flex} ${style.justifyBetween}`}
-      >
-        <div className={style.container}>
-          <input
-            type="checkbox"
-            className={`${style.checkbox} ${style.containerInput}`}
-          />
-          <span className={style.checkmark}></span>
-          <span style={{ fontSize: "12px", fontWeight: 600 }}>
-            {props.title}
-          </span>
-        </div>
-        <BsThreeDotsVertical />
+    <div
+      className={`${style.checkboxWrapper} ${style.flex} ${style.justifyBetween}`}
+      onClick={props.onClick}
+    >
+      <div className={style.container}>
+        <input type="checkbox" className={style.checkInput} />
+        <div
+          className={`${props.status ? style.checkmark : style.checkmarkFalse}`}
+        ></div>
+        <p className={style.checkTitle}>{props.title}</p>
       </div>
-    </>
+      <BsThreeDotsVertical />
+    </div>
   );
 }

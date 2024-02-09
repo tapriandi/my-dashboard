@@ -1,4 +1,5 @@
-import React, { CSSProperties } from "react";
+"use client";
+import React, { CSSProperties, useState } from "react";
 import { Checkbox, TitleWithMenu } from "my-comp-atoms";
 import { FaChevronRight } from "react-icons/fa6";
 import { CgMathPlus } from "react-icons/cg";
@@ -10,6 +11,26 @@ type Props = {
 };
 
 export default function ListItemToBuy(props: Props) {
+  const [listCheckbox, setListCehckbox] = useState(listBuy);
+
+  const handleCheckbox = (id: number) => {
+    let data: any[] = [];
+
+    listCheckbox.map((e) => {
+      if (e.id === id) {
+        data.push({
+          id: e.id,
+          item: e.item,
+          active: !e.active,
+        });
+      } else {
+        data.push(e);
+      }
+    });
+
+    setListCehckbox(data);
+  };
+
   return (
     <div className={style.box} style={props.style}>
       <TitleWithMenu title="List of item to buy" />
@@ -34,8 +55,14 @@ export default function ListItemToBuy(props: Props) {
         </button>
       </div>
       <div className={style.listCheckbox}>
-        {listBuy.map((item, idx) => (
-          <Checkbox title={item.item} key={idx} />
+        {listCheckbox.map((item, idx) => (
+          <Checkbox
+            key={idx}
+            id={item.id}
+            title={item.item}
+            status={item.active}
+            onClick={() => handleCheckbox(item.id)}
+          />
         ))}
       </div>
     </div>
