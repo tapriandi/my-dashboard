@@ -1,6 +1,7 @@
 "use client";
 import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { MainHeader } from "my-comp-molecules";
+import style from "./style.module.css";
 
 type Props = {
   children: ReactNode;
@@ -30,14 +31,9 @@ export default function MainContent(props: Props) {
   }, []);
 
   return (
-    <div className="relative bg-purple2 w-full">
-      <MainHeader
-        className={`${sticky ? "sticky w-full inset-0 bg-white" : ""}`}
-      />
-      <div
-        ref={scrollRef}
-        className="relative h-[calc(100vh-6rem)] overflow-y-auto"
-      >
+    <div className={style.mainContent}>
+      <MainHeader className={`${sticky ? style.mainSticky : ""}`} />
+      <div ref={scrollRef} className={style.mainScreen}>
         {props.children}
       </div>
     </div>

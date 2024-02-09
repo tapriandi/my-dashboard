@@ -5,6 +5,7 @@ import {
   NavigationMenu,
   NavigationProfile,
 } from "my-comp-molecules";
+import style from "./style.module.css";
 
 type Props = {
   className?: string;
@@ -12,14 +13,8 @@ type Props = {
 export default function Sidebar(props: Props) {
   const [sideNavShow, setSideNavShow] = useState<boolean>(false);
 
-  console.log(sideNavShow);
-
   return (
-    <div
-      className={`bg-white p-5 min-h-screen flex flex-col w-fit justify-between items-start delay-700 duration-500
-      ${sideNavShow ? "w-60" : ""}
-    `}
-    >
+    <div className={style.sidebar}>
       <NavigationHeader
         sideNavShow={sideNavShow}
         setSideNavShow={() => setSideNavShow(!sideNavShow)}

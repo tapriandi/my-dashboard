@@ -1,0 +1,45 @@
+.mainContent {
+  position: relative;
+  width: 100%;
+  background-color: #f7f6fb;
+}
+.mainSticky {
+  position: sticky;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+.mainScreen {
+  overflow-y: auto;
+  position: relative;
+  height: 90vh;
+  overflow-y: auto;
+}
+
+/* right */
+.boxRight {
+  position: relative;
+  width: 40%;
+  padding: 20px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: white;
+}
+
+/* sidebae */
+.sidebar {
+  display: flex;
+  padding: 14px;
+  padding-bottom: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: fit-content;
+  min-height: 100vh;
+  background-color: white;
+  transition-duration: 500ms;
+  transition-delay: 700ms;
+}
