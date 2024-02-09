@@ -3,6 +3,7 @@ import { SideBar, MainContent } from "my-comp-organisms";
 import { poppins } from "my-styles/fonts";
 import "my-styles/globals.css";
 import RightContent from "../components/Organisms/RightContent";
+import style from "./style.module.css";
 
 export const metadata: Metadata = {
   title: "My Dashboard",
@@ -17,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <div className="fixed inset-0 flex w-full">
+        <div className={style.layout}>
           <SideBar />
           <MainContent>{children}</MainContent>
           <RightContent />

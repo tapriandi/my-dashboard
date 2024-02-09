@@ -3,6 +3,7 @@ import { ButtonLink, TitleWithMenu } from "my-comp-atoms";
 import { GoArrowRight } from "react-icons/go";
 import { CardList } from "my-comp-molecules";
 import { spending } from "my-constant/index";
+import style from "./style.module.css";
 
 type Props = {
   className?: string;
@@ -10,22 +11,26 @@ type Props = {
 
 export default function LatestSpending(props: Props) {
   return (
-    <div className={`${props.className} p-4 rounded-2xl border border-gray1`}>
-      <TitleWithMenu menu title="Latest spending" size="text-lg" />
-      <div className=" flex flex-col divide-y divide-gray1">
+    <div className={style.box}>
+      <TitleWithMenu
+        menu
+        title="Latest spending"
+        style={{ fontSize: "18px" }}
+      />
+      <div>
         {spending.map((item, idx) => (
           <CardList
             item={item}
             key={idx}
             circle="large"
-            className="py-4 duration-300 hover:bg-gray2"
+            className={style.listSpending}
           />
         ))}
       </div>
       <ButtonLink
         full
         title="View All"
-        suffix={<GoArrowRight className="ml-1" />}
+        suffix={<GoArrowRight style={{ marginLeft: "4px" }} />}
       />
     </div>
   );

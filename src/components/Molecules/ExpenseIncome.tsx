@@ -1,5 +1,6 @@
 import React from "react";
 import { TitleWithMenu } from "my-comp-atoms";
+import style from "./style.module.css";
 
 type Props = {
   className?: string;
@@ -7,28 +8,29 @@ type Props = {
 
 export default function ExpenseIncome(props: Props) {
   return (
-    <div className={`${props.className} p-4 rounded-2xl border border-gray1`}>
-      <TitleWithMenu title="Expense and Income" size="text-lg" />
-      <div className="pt-3 pb-3 flex justify-between items-center">
-        <div className="">
-          <p className="text-sm">Expense</p>
-          <p className="text-xl font-medium">75%</p>
-          <p className="text-xs text-gray1">5663</p>
+    <div className={style.box}>
+      <TitleWithMenu title="Expense and Income" style={{ fontSize: "20px" }} />
+      <div className={style.boxExpense}>
+        <div>
+          <p className={style.tsm}>Expense</p>
+          <p className={style.expenseTitle}>75%</p>
+          <p className={style.expenseCount}>5663</p>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="border-r border-gray1 h-5 w-0"></div>
-          <p className="text-sm">vs</p>
-          <div className="border-r border-gray1 h-5 w-0"></div>
+        <div className={style.vsBox}>
+          <div className={style.vsLine}></div>
+          <p className={style.tsm}>vs</p>
+          <div className={style.vsLine}></div>
         </div>
-        <div className=" text-right">
-          <p className="text-sm">Income</p>
-          <p className="text-xl font-medium">40%</p>
-          <p className="text-xs text-gray1">2656</p>
+        <div style={{ textAlign: "right" }}>
+          <p className={style.tsm}>Income</p>
+          <p className={style.expenseTitle}>40%</p>
+          <p className={style.expenseCount}>2656</p>
         </div>
       </div>
-      <div className="flex space-x-1">
-        <div className="w-3/4 h-5 rounded-sm bg-purple"></div>
-        <div className="w-1/4 h-5 rounded-sm bg-orange"></div>
+      <div style={{ display: "flex" }}>
+        <div className={style.progresPurple}></div>
+        <div style={{ width: "1%" }}></div>
+        <div className={style.progresOrange}></div>
       </div>
     </div>
   );
