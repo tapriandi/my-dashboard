@@ -58,7 +58,7 @@ const DoughnutCart = () => {
   };
 
   return (
-    <div className="relative pt-6">
+    <div style={{ position: "relative", paddingTop: "30px" }}>
       <PieChart width={width * 0.23} height={width * 0.1} style={{ zIndex: 2 }}>
         <Pie
           data={data}
@@ -83,7 +83,7 @@ const DoughnutCart = () => {
           x="50%"
           y="60%"
           width={200}
-          className="text-3xl font-semibold"
+          style={{ fontSize: "30px", fontWeight: 600 }}
           textAnchor="middle"
         >
           90%
@@ -91,7 +91,7 @@ const DoughnutCart = () => {
         <text
           x="50%"
           y="70%"
-          className="text-sm text-gray1"
+          style={{ fontSize: "14px", color: "#AAADB6" }}
           width={200}
           textAnchor="middle"
         >
@@ -99,8 +99,8 @@ const DoughnutCart = () => {
         </text>
       </PieChart>
 
-      <div className="absolute z-1 inset-0 -top-[5%] left-[1%] w-full flex justify-center">
-        <Image src={Curved} alt="" className="w-[90%] h-[90%]" />
+      <div className={style.dhIndicator}>
+        <Image src={Curved} alt="" style={{ width: "90%", height: "90%" }} />
       </div>
     </div>
   );

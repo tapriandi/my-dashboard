@@ -25,3 +25,14 @@
   width: 8px;
   height: 8px;
 }
+.dhIndicator {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  justify-content: center;
+  width: 100%;
+  left: 1%;
+}

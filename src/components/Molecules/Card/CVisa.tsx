@@ -10,7 +10,7 @@ type Props = {
 export default function CardVisa(props: Props) {
   return (
     <div className={style.cvWrapper} style={props.style}>
-      <Image src={Visa} alt="" style={{ height: "100%" }} />
+      <Image src={Visa} alt="" style={{ height: "100%", width: '100%' }} />
       <div className={style.cvContent}>
         <div>
           <p style={{ paddingBottom: "8px" }}>**** 9838</p>
